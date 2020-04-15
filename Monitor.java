@@ -54,12 +54,20 @@ public class Monitor
 	 * Grants request (returns) to eat when both chopsticks/forks are available.
 	 * Else forces the philosopher to wait()
 	 */
+	//there is no need to check for starvation:
+	//1. every philosopher will leave after eating 10 times,
+	//   even there is someone who is hungry all the time, 
+	//   he/she can eat after the two adjacent ones left
+	//2. after EATING, a philosopher will take some time to THINK
+	//   and this will give other philosophers more chance to eat
+	//   which also helps prevent starvation
 	public synchronized void pickUp(final int piTID)
 	{
 		//continuously check if the two chopsticks are available
 		while(true) {
 //			System.out.println(DEBUG + "Philosopher " + piTID + " is trying to pick up two chopsticks");
 			//if any of the chopstick is unavailable, wait...
+			//this prevent DEADLOCK from happening
 			if(!chopsticks[piTID-1].isAvailable || !chopsticks[piTID%NUMBER_OF_CHOPSTICKS].isAvailable) {
 				try {
 //					System.out.println(DEBUG + "chopstick " + (piTID-1) + ": " + chopsticks[piTID-1].isAvailable);

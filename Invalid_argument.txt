@@ -1,0 +1,5 @@
+%java DiningPhilosophers -3
+"-3" is not a positive decimal integer
+
+Usage: java Dining Philosopher[-3]
+%

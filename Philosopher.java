@@ -115,7 +115,7 @@ public class Philosopher extends BaseThread
 
 			yield();
 		}
-		System.out.println("\n\n\tDEBUG -- Philosopher " + this.getTID() + " has finished!!!\n\n\n");
+//		System.out.println("\n\n\tDEBUG -- Philosopher " + this.getTID() + " has finished!!!\n\n\n");
 	} // run()
 
 	/**

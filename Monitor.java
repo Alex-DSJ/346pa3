@@ -27,7 +27,7 @@ public class Monitor
 	}
 	
 	private Chopstick chopsticks[];
-	final public String DEBUG = "\\tDEBUG -- ";
+//	final public String DEBUG = "\\tDEBUG -- ";
 
 
 	/**

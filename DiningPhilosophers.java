@@ -64,10 +64,11 @@ public class DiningPhilosophers
 					else {
 						System.out.println("%java DiningPhilosophers " + argv[0]);
 						System.out.println("\"" + argv[0] + "\" is not a positive decimal integer\n" );
-						System.out.println("Usage: java Dining Philosopher[" + DEFAULT_NUMBER_OF_PHILOSOPHERS + "]\n%");
+						System.out.println("Usage: java Dining Philosopher[" + argv[0] + "]\n%");
+						System.exit(0);
 					}
 				} catch (Exception e) {
-					System.out.println("Invalid argument, the number of philosopher will be set to 4 by default.");
+					System.out.println("Invalid argument, the program will terminate.");
 				}
 			}
 
